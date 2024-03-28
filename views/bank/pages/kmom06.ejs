@@ -1,0 +1,28 @@
+
+<div class="container">
+
+    <%- include("../partials/header"); %>
+
+    <form>
+        Choose color: <input type="color" id="color">
+        <!-- <input type="submit" value="Skicka"> -->
+        Enter text: <input type="text" placeholder="Enter some text" required> <!-- Required (must send)-->
+        Enter message <textarea cols="20" rows="20">
+
+        </textarea>
+
+        Enter number: <input type="number" min="0" max="10" step="2">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        let chosencolor = document.getElementById('color').value;
+        color.addEventListener('change', (event) => {
+            let color = event.target.value;
+
+            document.body.style.backgroundColor = color;
+        });
+    </script>
+
+    <%- include("../partials/footer"); %>
+</div>
